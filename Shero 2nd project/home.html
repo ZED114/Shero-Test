@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-bar">
+          <li>
+            <a class="company-name" href="#">ELDERWOOD WINE MERCHANTS</a>
+          </li>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="">SHOP WINE</a></li>
+            <li><a href="">SPRITS</a></li>
+            <li><a href="">PANTRY</a></li>
+            <li><a href="">E-GIFT CARDS</a></li>
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </span>
+          <label for="check" class="open-menu"
+            ><i class="fas fa-bars"></i
+          ></label>
+          <!-- search bar -->
+          <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                <path
+                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                ></path>
+              </g>
+            </svg>
+            <input
+              placeholder="Search entire store here..."
+              type="search"
+              class="header-input"
+            />
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div class="intro-container">
+        <h1>Curated Selections</h1>
+        <p>
+          Join 10,000 clients nationwide who enjoy reading about and receiving
+          the finest selections from the wine world
+        </p>
+        <button class="shop-button">Shop Now</button>
+        <button class="join-button">Join Us</button>
+      </div>
+    </section>
+
+    <!-- Merchant's pick section -->
+
+    <section class="main-section">
+      <div class="slider-section">
+        <div class="text-container">
+          <h1>Merchant's Pick</h1>
+          <p>
+            Hand-selected features for both budding enthusiasts and avid
+            collectors.
+          </p>
+          <button>View ALL</button>
+        </div>
+        <!-- THE HTML FOR THE SLIDER CONTAINER -->
+        <button class="prev-btn" onclick="slideLeft()">&#10094;</button>
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slide">
+                <div class="inner-slidea">
+                  <img src="images/slider image.png" alt="" />
+                </div>
+                <div class="inner-slideb">
+                  <div class="innerSlideB-container">
+                    <h3>2018 Poggiotondo, Brunello di Montalcino</h3>
+                    <p>
+                      Brunello at this price and Quality is your new house pour
+                    </p>
+                    <button>View more</button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="inner-slidea">
+                  <img src="images/slider image.png" alt="" />
+                </div>
+                <div class="inner-slideb">
+                  <div class="innerSlideB-container">
+                    <h3>2018 Poggiotondo, Brunello di Montalcino</h3>
+                    <p>
+                      Brunello at this price and Quality is your new house pour
+                    </p>
+                    <button>View more</button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="inner-slidea">
+                  <img src="images/slider image.png" alt="" />
+                </div>
+                <div class="inner-slideb">
+                  <div class="innerSlideB-container">
+                    <h3>2018 Poggiotondo, Brunello di Montalcino</h3>
+                    <p>
+                      Brunello at this price and Quality is your new house pour
+                    </p>
+                    <button>View more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="next-btn" onclick="slideRight()">&#10095;</button>
+      </div>
+      <!-- THE HTML FOR THE CARD SECTION -->
+
+      <div class="card-section">
+        <div class="card">
+          <img src="images/first card image.png" alt="" />
+          <h2>E-Gift Card</h2>
+          <p>
+            Barolo, Brunello, Burgundy, Bordeaux, and even Olive Oil - there are
+            so many options and so many personal preferences. Let your recipient
+            decide what he or she prefers with an Englewood Wine Merchants
+            e-gift card.
+          </p>
+          <a href="#">Learn More &#x2197;</a>
+        </div>
+        <div class="card">
+          <img src="images/second card image.png" alt="" />
+          <h2>Corporate Concierge & Gifting</h2>
+          <p>
+            Sending several gifts? Our corporate gifting team is here to help.
+            From Napa Valey to the hills of Tuscany, we can customize your gifts
+            whether you are sending to corporate clients, colleagues, friends,
+            or loved ones.
+          </p>
+          <a href="#">Learn More &#x2197;</a>
+        </div>
+      </div>
+      <!-- THE HTML FOR THE CELLAR ESSENTIALS SECTION -->
+      <div class="cellarEssentials-section">
+        <div class="cellarEssentials-container">
+          <h1>Cellar Essentials</h1>
+          <p>Seasonal cellar essentials for everyday enjoyment.</p>
+          <button>View ALL</button>
+        </div>
+        <div class="cellarEssentials-cards">
+          <div class="cellarEssentials-card">
+            <img src="images/essentials img 1.png" alt="" />
+            <p class="firstCard-p">
+              2017 Robert Sinskey, "Los Carneros" Pinot Noir, 375ml
+            </p>
+            <a href="#">$28.95</a>
+          </div>
+          <div class="cellarEssentials-card">
+            <img src="images/essentials img 2.png" alt="" />
+            <p class="secondCard-p">
+              2021 Walter Hansel "North Slope" Pinot Noir
+            </p>
+            <a href="#">$28.95</a>
+          </div>
+          <div class="cellarEssentials-card">
+            <img src="images/essentials img 3.png" alt="" />
+            <p class="thirdCard-p">
+              2020 Occidental, "Freestone-Occidental" Pinot Noir, Sonoma
+            </p>
+            <a href="#">$28.95</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- THE HTML FOR THE GRID SECTION -->
+
+      <div class="grid-section">
+        <div class="cellarEssentials-container">
+          <h1>Follow Us</h1>
+          <p>Follow us on Instagram to be more connected with us.</p>
+          <button>Follow Us</button>
+        </div>
+        <div class="grid-container">
+          <div class="grid-element">
+            <img src="images/grid image1.png" width="100%" alt="" />
+          </div>
+          <div class="grid-element">
+            <img src="images/grid image2.png" width="100%" alt="" />
+          </div>
+          <div class="grid-element">
+            <img src="images/grid image3.png" width="100%" alt="" />
+          </div>
+          <div class="grid-element">
+            <img src="images/grid image4.png" width="100%" alt="" />
+          </div>
+          <div class="grid-element">
+            <img src="images/grid image5.png" width="100%" alt="" />
+          </div>
+          <div class="grid-element">
+            <img src="images/grid image6.png" width="100%" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- THE HTML FOR THE MAP CONTAINERS -->
+      <div class="mapCard-section">
+        <div class="mapCard1">
+          <i class="fa-regular fa-map"></i>
+          <h2>Our Location</h2>
+          <p>One Engle Street, Englewood, NJ 07631</p>
+        </div>
+        <div class="mapCard2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23969.32871827571!2d19.808256!3d41.327001599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031a9569c7c2b%3A0x88aaa531bfdab291!2sTirana%20Ring%20Center!5e0!3m2!1sen!2s!4v1720091156971!5m2!1sen!2s"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE HTML FOR THE FOOTER DESIGN -->
+
+    <footer class="footer">
+      <div class="secondFooter-container">
+        <div class="footer-links">
+          <h3>HELPFUL LINKS</h3>
+          <a href="">Contact Us</a>
+          <a href="">Support</a>
+          <a href="">About</a>
+        </div>
+        <div class="footer-links">
+          <h3>HELPFUL LINKS</h3>
+          <a href="">Contact Us</a>
+          <a href="">Support</a>
+          <a href="">About</a>
+        </div>
+        <div class="footer-links">
+          <h3>SHOPPING</h3>
+          <a href="">Reviews</a>
+          <a href="">Returns</a>
+          <a href="">Shipping</a>
+        </div>
+        <div class="footer-links">
+          <h3>GET IN TOUCH</h3>
+          <a href="#">410-772-534</a>
+          <a href="#">support@shoeswonder.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="home.js"></script>
+  </body>
+</html>

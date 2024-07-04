@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-container {
+  position: relative;
+}
+
+.searchbar {
+  padding: 5px;
+  padding-left: 30px; /* space for search icon */
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-search-icon {
+  display: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-icons {
+    position: absolute;
+    right: 20px;
+  }
+
+  .navbar-icons i {
+    margin-left: 10px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .searchbar {
+    display: none;
+  }
+  .search-icon {
+    display: none;
+  }
+  .mobile-search-icon {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .searchbar.mobile-active {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: calc(100% - 100px);
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+}

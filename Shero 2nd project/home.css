@@ -1,0 +1,633 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  --color1: #000000;
+  --color2: #ffffff;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+.company-name {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1826px;
+  height: 89px;
+  margin: 0 auto;
+  top: 27px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: #d3d8dced;
+  padding: 12px 20px;
+}
+.menu {
+  display: flex;
+  padding-left: 100px;
+}
+.menu li {
+  padding-left: 20px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 710px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    padding-right: 120px;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* css design for the search bar */
+.group {
+  display: flex;
+  line-height: 28px;
+  padding-left: 30px;
+  align-items: center;
+  position: relative;
+}
+
+.header-input {
+  max-width: 376px;
+  max-height: 41px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 20.5px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.header-input::placeholder {
+  color: #555554;
+}
+
+.header-input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(234, 76, 137, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 2rem;
+  fill: #9e9ea7;
+  width: 2rem;
+  height: 1rem;
+}
+
+/*Hero section design */
+
+.hero-section {
+  width: 100%;
+  padding: 20px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 838px; /* Set a default height */
+  background-image: url("images/main\ image.png");
+  background-size: cover; /* Ensure the background image covers the entire header */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  display: flex;
+  margin-top: 35px;
+  color: white;
+}
+.intro-container {
+  margin-left: 70px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 330px;
+}
+
+.hero-section h1 {
+  font-family: "Lora", serif;
+  line-height: 122.88px;
+  font-weight: 500px;
+  font-size: 96px;
+}
+.hero-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  line-height: 31.69px;
+}
+.intro-container button {
+  max-width: 362px;
+  cursor: pointer;
+  margin-top: 6px;
+  height: 54px;
+}
+.shop-button {
+  font-size: 24px;
+  background-color: #b7926a;
+  line-height: 29.26px;
+  color: #ffff;
+}
+.join-button {
+  background-color: #ffff;
+  line-height: 29.26px;
+  font-size: 24px;
+  color: #1c1c1c;
+}
+
+/* the design css for the slider section*/
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1734px;
+  width: 100%;
+  margin: 0 auto;
+}
+.slider-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 35px 0px;
+  height: 661px;
+  margin: 0 auto;
+}
+.text-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 150px;
+  padding: 20px;
+  max-width: 341px;
+  height: 334px;
+}
+.text-container h1 {
+  font-family: "Lora", serif;
+  max-width: 220px;
+  font-weight: 500px;
+  font-size: 40px;
+  line-height: 51.2px;
+}
+.text-container p {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(133, 128, 128, 1);
+  font-weight: 400px;
+  font-size: 22px;
+  line-height: 26.82px;
+}
+.text-container button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500px;
+  font-size: 24px;
+  line-height: 29.26px;
+  text-align: center;
+  max-width: 328px;
+  background-color: transparent;
+  height: 75px;
+  border: 1px solid rgba(183, 146, 106, 1);
+  border-radius: 2px;
+  color: rgba(32, 32, 32, 1);
+  cursor: pointer;
+}
+
+/* the design of the slider container */
+
+.slider-container {
+  width: 1085.24px;
+  height: 506px;
+  overflow: hidden;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.inner-slidea,
+.inner-slideb {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #333;
+}
+
+.inner-slidea img {
+  width: 100%;
+}
+
+.inner-slide:last-child {
+  border-right: none;
+}
+
+/* THE DESIGN CODE FOR THE INNER SLIDE B CONTAINER THAT CONTAINS THE TEXT */
+.inner-slideb {
+  background-color: rgba(32, 32, 32, 1);
+}
+
+.innerSlideB-container {
+  max-width: 491px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.innerSlideB-container h3 {
+  max-width: 272.49px;
+  line-height: 30.8px;
+  font-size: 24.06px;
+  font-weight: 600px;
+  color: rgba(183, 146, 106, 1);
+  font-family: "Lora", serif;
+  padding-bottom: 10px;
+}
+.inner-slideb p {
+  max-width: 307px;
+  padding-bottom: 82px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  font-size: 15.31px;
+  color: rgba(255, 255, 255, 1);
+}
+.inner-slideb button {
+  font-family: "Lora", serif;
+  font-weight: 400px;
+  font-size: 13.12px;
+  line-height: 16.8px;
+  color: rgba(183, 146, 106, 1);
+  background-color: transparent;
+  border: 0.55px solid rgba(183, 146, 106, 1);
+  cursor: pointer;
+  width: 101.72px;
+  height: 27.34px;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  margin-top: 100px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: #555554;
+  transition: 0.5s ease-in;
+}
+
+/* The design for the cellar essentials section */
+
+.card-section {
+  max-width: 100%;
+  height: 661px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 100%;
+  height: 661px;
+}
+
+.card {
+  width: 855px;
+  background-color: rgba(249, 249, 249, 1);
+  height: 661px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.card h2 {
+  font-family: "Lora", serif;
+  color: rgba(32, 32, 32, 1);
+  font-weight: 500px;
+  font-size: 24px;
+  line-height: 30.72px;
+}
+.card p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  font-size: 18px;
+  color: rgba(32, 32, 32, 1);
+  line-height: 22px;
+}
+.card a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500px;
+  font-size: 20px;
+  line-height: 24.38px;
+  color: rgba(183, 146, 106, 1);
+}
+
+/* THE DESING FOR THE CELLAR ESSENTIALS CONTAINER */
+
+.cellarEssentials-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 150px;
+  width: 100%;
+  height: 661px;
+}
+.cellarEssentials-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 341px;
+  height: 334px;
+}
+.cellarEssentials-container h1 {
+  font-family: "Lora", serif;
+  max-width: 220px;
+  font-weight: 500px;
+  font-size: 40px;
+  line-height: 51.2px;
+}
+.cellarEssentials-container p {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(133, 128, 128, 1);
+  font-weight: 400px;
+  font-size: 22px;
+  line-height: 26.82px;
+}
+.cellarEssentials-container button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500px;
+  font-size: 24px;
+  line-height: 29.26px;
+  text-align: center;
+  max-width: 328px;
+  background-color: transparent;
+  height: 75px;
+  border: 1px solid rgba(183, 146, 106, 1);
+  border-radius: 2px;
+  color: rgba(32, 32, 32, 1);
+  cursor: pointer;
+}
+
+/* THE DESIGN FOR THE CARDS IN THE CELLAR ESSENTIALS SECTION */
+
+.cellarEssentials-cards {
+  width: 1fr;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  gap: 10px;
+}
+.cellarEssentials-card {
+  width: 375px;
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.cellarEssentials-card img {
+  width: 100%;
+  height: 415px;
+}
+.cellarEssentials-card p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500px;
+  line-height: 19.5px;
+  font-size: 16px;
+}
+.cellarEssentials-card a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  line-height: 21.94px;
+  font-size: 18px;
+  color: rgba(183, 146, 106, 1);
+}
+
+.firstCard-p {
+  width: 80%;
+}
+.secondCard-p {
+  width: 60%;
+}
+.thirdCard-p {
+  width: 100%;
+}
+
+/* THE DESIGN FOR THE GRID SECTION */
+.grid-section {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.grid-container {
+  width: 1fr;
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+/* THE DESIGN FOR THE MAP CARDS SECTION */
+.mapCard-section {
+  max-width: 100%;
+  height: 661px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  height: 661px;
+}
+.mapCard1,
+.mapCard2 {
+  width: 855px;
+  height: 540px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+.mapCard1 {
+  background-color: rgba(32, 32, 32, 1);
+  text-align: center;
+  margin-left: 10px;
+  align-items: center;
+  padding-top: 200px;
+}
+.mapCard1 i {
+  font-size: 50px;
+  padding-bottom: 15px;
+  color: rgba(183, 146, 106, 1);
+}
+.mapCard1 h2 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+  font-size: 36px;
+  line-height: 46.08px;
+  letter-spacing: 0.06px;
+}
+.mapCard1 p {
+  font-family: "Lora", serif;
+  color: rgba(183, 146, 106, 1);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30.72px;
+  letter-spacing: 0.06px;
+}
+.mapCard2 {
+  margin-right: 10px;
+}
+
+/* THE DESIGN FOR THE FOOTER OF THE PAGE */
+
+.footer {
+  width: 100%;
+  height: 500px;
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  border-top: 1px solid rgba(183, 146, 106, 1);
+  margin-top: 20px;
+}
+
+.firstFooter-container {
+  text-align: center;
+  padding-top: 10px;
+}
+.secondFooter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.firstFooter-container p {
+  padding-bottom: 10px;
+}
